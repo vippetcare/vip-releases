@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^releases$ views/releases/index.php
+RewriteRule ^releases/([0-9]+)$ /views/releases/show.php?id=$1
+RewriteRule ^releases/new$ views/releases/new.php
+RewriteRule ^releases/([0-9]+)/edit$ /views/releases/edit.php?id=$1
+
+ErrorDocument 404 /404.php
